@@ -1,0 +1,15 @@
+#include <iostream>
+#include "person.h"
+int main()
+{
+    // Groeße, Gewicht, Alter, IQ
+	try
+	{
+		Person p{ 1.80, 72.5, 32, 108.3 };
+		std::cout << p;
+	}
+	catch (const std::runtime_error& e)
+	{
+		std::cout << e.what();
+	}
+}
