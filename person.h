@@ -9,6 +9,8 @@ public:
 	double get_gewicht() const;
 	double get_alter() const;
 	double get_iq() const;
+	bool operator==(const Person&) const;
+	bool operator!=(const Person&) const;
 	std::ostream& print(std::ostream&) const;
 };
 std::ostream& operator<<(std::ostream&, const Person&);
