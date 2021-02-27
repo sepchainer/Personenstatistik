@@ -32,6 +32,16 @@ double Person::get_iq() const {
 	return iq;
 }
 
+bool Person::operator==(const Person& p) const {
+	if (groesse == p.get_groesse() && gewicht == p.get_gewicht() && alter == p.get_alter() && iq == p.get_iq())
+		return true;
+	else
+		return false;
+}
+
+bool Person::operator!=(const Person& p) const {
+	return !(this == p);
+}
 
 std::ostream& Person::print(std::ostream& o) const {
 	return o << "Alter: " << alter << "; Groesse: " << groesse << "; Gewicht: " << gewicht << "; IQ: " << iq << ";";
