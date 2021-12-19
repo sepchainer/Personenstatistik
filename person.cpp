@@ -40,7 +40,7 @@ bool Person::operator==(const Person& p) const {
 }
 
 bool Person::operator!=(const Person& p) const {
-	return !(this == p);
+	return !(*this == p);
 }
 
 std::ostream& Person::print(std::ostream& o) const {

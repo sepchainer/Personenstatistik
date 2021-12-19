@@ -1,13 +1,15 @@
 #include "personenliste.h"
 
-Personenliste::Personenliste(const std::vector<Person> & personenliste) : personenliste{personenliste} {}
+Personenliste::Personenliste(const std::vector<Person>& personenliste) : personenliste{personenliste} {}
 
 void Personenliste::person_hinzufuegen(const Person& p) {
-	for (size_t i{ 0 }; i < personenliste.size()-1; ++i) {
-		if (p == personenliste.at(i))
-			return;
-	}
-	personenliste.push_back(p);
+    if (!personenliste.empty()) {
+        for (size_t i{0}; i < personenliste.size() - 1; ++i) {
+            if (p == personenliste.at(i))
+                return;
+        }
+        personenliste.push_back(p);
+    }
 }
 
 void Personenliste::sort_personenliste(const Sort_eigenschaften& sort_eigenschaft) {

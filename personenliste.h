@@ -4,12 +4,13 @@
 #include <vector>
 #include <string>
 
+enum class Sort_eigenschaften{Groesse, Gewicht, Alter, IQ};
+
 class Personenliste
 {
 	std::vector<Person> personenliste;
 public:
-	enum class Sort_eigenschaften{Groesse, Gewicht, Alter, IQ};
-	Personenliste(const std::vector<Person> & = {});
+	explicit Personenliste(const std::vector<Person>& = {});
 	void person_hinzufuegen(const Person&);
 	void sort_personenliste(const Sort_eigenschaften&);
 	std::ostream& print(std::ostream&) const;
