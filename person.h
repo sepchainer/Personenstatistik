@@ -11,6 +11,6 @@ public:
 	double get_iq() const;
 	bool operator==(const Person&) const;
 	bool operator!=(const Person&) const;
-	std::ostream& print(std::ostream&) const;
+	virtual std::ostream& print(std::ostream&) const;
 };
 std::ostream& operator<<(std::ostream&, const Person&);

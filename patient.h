@@ -13,9 +13,9 @@ class Patient : public Person{
     Gesundheitszustand ges_zustand;
     std::string krankheit;
 public:
-    Patient(const int&, const Gesundheitszustand = Gesundheitszustand::Gesund, const std::string = "keine");
-
-};
-
-
+    Patient(const double&, const double&, const double&, const double&,
+            const int&, const Gesundheitszustand& = Gesundheitszustand::Gesund, const std::string& = "keine");
+    std::ostream& print(std::ostream&) const;
+};;
+std::ostream& operator<<(std::ostream&, const Patient&);
 #endif //PERSONENSTATISTIK_PATIENT_H
