@@ -20,6 +20,7 @@ std::ostream& Patient::print(std::ostream& o) const {
         case Gesundheitszustand::Gesund: o << "Gesund; ";
     }
     o << "Krankheit: " << krankheit << ";";
+    return o;
 }
 
 std::ostream& operator<<(std::ostream& o, const Patient& p) {

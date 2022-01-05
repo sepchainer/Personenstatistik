@@ -17,7 +17,7 @@ int main()
         try {
             Person person1 {1.80, 72.5, 32, 108.3};
             std::cout << person1 <<  '\n';
-            Patient patient1 {1.80, 72.5, 32, 108.3, 4580};
+            Patient patient1 {person1.get_groesse(), person1.get_gewicht(), person1.get_alter(), person1.get_iq(), 4580};
             std::cout << patient1 << '\n';
         }
         catch (const std::runtime_error& e)

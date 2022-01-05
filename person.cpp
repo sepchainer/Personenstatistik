@@ -45,6 +45,7 @@ bool Person::operator!=(const Person& p) const {
 
 std::ostream& Person::print(std::ostream& o) const {
 	o << "Alter: " << alter << "; Groesse: " << groesse << "; Gewicht: " << gewicht << "; IQ: " << iq << ";";
+    return o;
 }
 
 std::ostream& operator<<(std::ostream& o, const Person&p ){
